@@ -49,6 +49,13 @@ public class MaxValueGenericsTest {
         Float maxFloatValue = maxValue.greatestFloat(45.5f, 244.3f, 25.6f);
         Assert.assertEquals(Float.valueOf(244.3f), maxFloatValue);
     }
+
+    //Given Max num at the 3rd position return the same number
+    @Test
+    public void givenMaxFloatNumber_ShouldReturn_AtThirdPosition() {
+        Float maxFloatValue = maxValue.greatestFloat(45.5f, 244.3f, 2542.6f);
+        Assert.assertEquals(Float.valueOf(2542.6f), maxFloatValue);
+    }
 }
 
 
