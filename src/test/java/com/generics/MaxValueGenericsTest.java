@@ -34,6 +34,14 @@ public class MaxValueGenericsTest {
         Integer maxIntegerValue = maxValue.greatestInteger(45, 2, 250);
         Assert.assertEquals(Integer.valueOf(250), maxIntegerValue);
     }
+
+    //Testing the greatest number among the three given float value
+    //Given Max num at the 1st position return the same number
+    @Test
+    public void givenMaxFloatNumber_ShouldReturn_AtFirstPosition() {
+        Float maxFloatValue = maxValue.greatestFloat(45.5f, 2.3f, 25.6f);
+        Assert.assertEquals(Float.valueOf(45.5f), maxFloatValue);
+    }
 }
 
 
