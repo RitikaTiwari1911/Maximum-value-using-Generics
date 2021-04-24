@@ -58,10 +58,17 @@ public class MaxValueGenericsTest {
     }
 
     //Testing the greatest number among the three given float value
-    //Given Max num at the 1st position return the same number
+    //Given Max string at the 1st position return the same number
     @Test
     public void givenMaxString_ShouldReturn_AtFirstPosition() {
         String maxStringValue = maxValue.greatestString("strawberry","apple","pear");
+        Assert.assertEquals("strawberry", maxStringValue);
+    }
+
+    //Given Max string at the 2nd position return the same number
+    @Test
+    public void givenMaxString_ShouldReturn_AtSecondPosition() {
+        String maxStringValue = maxValue.greatestString("apple","strawberry","pear");
         Assert.assertEquals("strawberry", maxStringValue);
     }
 }
