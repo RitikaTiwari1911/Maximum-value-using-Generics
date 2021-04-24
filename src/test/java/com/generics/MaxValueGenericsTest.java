@@ -20,6 +20,13 @@ public class MaxValueGenericsTest {
         Integer maxIntegerValue = maxValue.greatestInteger(45, 2, 25);
         Assert.assertEquals(Integer.valueOf(45), maxIntegerValue);
     }
+
+    //Given Max num at the 2nd position return the same number
+    @Test
+    public void givenMaxNumber_ShouldReturn_AtSecondPosition() {
+        Integer maxIntegerValue = maxValue.greatestInteger(121, 200, 25);
+        Assert.assertEquals(Integer.valueOf(200), maxIntegerValue);
+    }
 }
 
 
