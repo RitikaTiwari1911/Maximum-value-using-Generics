@@ -71,6 +71,13 @@ public class MaxValueGenericsTest {
         String maxStringValue = maxValue.greatestString("apple","strawberry","pear");
         Assert.assertEquals("strawberry", maxStringValue);
     }
+
+    //Given Max string at the 3rd position return the same number
+    @Test
+    public void givenMaxString_ShouldReturn_AtThirdPosition() {
+        String maxStringValue = maxValue.greatestString("apple","pear","strawberry");
+        Assert.assertEquals("strawberry", maxStringValue);
+    }
 }
 
 
