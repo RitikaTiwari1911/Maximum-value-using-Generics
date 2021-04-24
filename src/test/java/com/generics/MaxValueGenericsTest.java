@@ -56,6 +56,14 @@ public class MaxValueGenericsTest {
         Float maxFloatValue = maxValue.greatestFloat(45.5f, 244.3f, 2542.6f);
         Assert.assertEquals(Float.valueOf(2542.6f), maxFloatValue);
     }
+
+    //Testing the greatest number among the three given float value
+    //Given Max num at the 1st position return the same number
+    @Test
+    public void givenMaxString_ShouldReturn_AtFirstPosition() {
+        String maxStringValue = maxValue.greatestString("strawberry","apple","pear");
+        Assert.assertEquals("strawberry", maxStringValue);
+    }
 }
 
 

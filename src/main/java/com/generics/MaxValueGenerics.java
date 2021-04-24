@@ -26,6 +26,19 @@ public class MaxValueGenerics{
         }
         return maximum;
     }
+
+    //method to find the maximum String value
+    public static String greatestString(String a, String b, String c){
+        //Assuming that a is the maximum number for now
+        String maximum=a;
+        if(maximum.compareTo(b)<0){
+            maximum=b;      //now b is the maximum string
+        }
+        if(maximum.compareTo(c)<0){
+            maximum=c;      //now c is the maximum string
+        }
+        return maximum;
+    }
 }
 
 
