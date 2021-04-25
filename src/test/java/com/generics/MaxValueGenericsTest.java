@@ -13,70 +13,26 @@ public class MaxValueGenericsTest {
         maxValue = new MaxValueGenerics();
     }
 
-    //Testing the greatest number among the three given integer value
-    //Given Max num at the 1st position return the same number
+    //Using generics to find the greatest value among three given values
+    //Finding the greatest integer value
     @Test
-    public void givenMaxNumber_ShouldReturn_AtFirstPosition() {
-        Integer maxIntegerValue = maxValue.greatestInteger(45, 2, 25);
-        Assert.assertEquals(Integer.valueOf(45), maxIntegerValue);
+    public void givenThreeInteger_ReturnGreatestNumber(){
+        Integer maxInteger = maxValue.MaximumTest(12,46,91);
+        Assert.assertEquals(Integer.valueOf(91),maxInteger);
     }
 
-    //Given Max num at the 2nd position return the same number
+    //Finding the greatest float value
     @Test
-    public void givenMaxNumber_ShouldReturn_AtSecondPosition() {
-        Integer maxIntegerValue = maxValue.greatestInteger(121, 200, 25);
-        Assert.assertEquals(Integer.valueOf(200), maxIntegerValue);
+    public void givenThreeFloat_ReturnGreatestFloat(){
+        Float maxFloat = maxValue.MaximumTest(2.6f,94.3f,12.3f);
+        Assert.assertEquals(Float.valueOf(94.3f),maxFloat);
     }
 
-    //Given Max num at the 3rd  position return the same number
+    //Finding the greatest String value
     @Test
-    public void givenMaxNumber_ShouldReturn_AtThirdPosition() {
-        Integer maxIntegerValue = maxValue.greatestInteger(45, 2, 250);
-        Assert.assertEquals(Integer.valueOf(250), maxIntegerValue);
-    }
-
-    //Testing the greatest number among the three given float value
-    //Given Max num at the 1st position return the same number
-    @Test
-    public void givenMaxFloatNumber_ShouldReturn_AtFirstPosition() {
-        Float maxFloatValue = maxValue.greatestFloat(45.5f, 2.3f, 25.6f);
-        Assert.assertEquals(Float.valueOf(45.5f), maxFloatValue);
-    }
-
-    //Given Max num at the 2nd position return the same number
-    @Test
-    public void givenMaxFloatNumber_ShouldReturn_AtSecondPosition() {
-        Float maxFloatValue = maxValue.greatestFloat(45.5f, 244.3f, 25.6f);
-        Assert.assertEquals(Float.valueOf(244.3f), maxFloatValue);
-    }
-
-    //Given Max num at the 3rd position return the same number
-    @Test
-    public void givenMaxFloatNumber_ShouldReturn_AtThirdPosition() {
-        Float maxFloatValue = maxValue.greatestFloat(45.5f, 244.3f, 2542.6f);
-        Assert.assertEquals(Float.valueOf(2542.6f), maxFloatValue);
-    }
-
-    //Testing the greatest number among the three given float value
-    //Given Max string at the 1st position return the same number
-    @Test
-    public void givenMaxString_ShouldReturn_AtFirstPosition() {
-        String maxStringValue = maxValue.greatestString("strawberry","apple","pear");
-        Assert.assertEquals("strawberry", maxStringValue);
-    }
-
-    //Given Max string at the 2nd position return the same number
-    @Test
-    public void givenMaxString_ShouldReturn_AtSecondPosition() {
-        String maxStringValue = maxValue.greatestString("apple","strawberry","pear");
-        Assert.assertEquals("strawberry", maxStringValue);
-    }
-
-    //Given Max string at the 3rd position return the same number
-    @Test
-    public void givenMaxString_ShouldReturn_AtThirdPosition() {
-        String maxStringValue = maxValue.greatestString("apple","pear","strawberry");
-        Assert.assertEquals("strawberry", maxStringValue);
+    public void givenThreeString_ReturnGreatestString(){
+        String maxString = maxValue.MaximumTest("pear","strawberry","apple");
+        Assert.assertEquals("strawberry",maxString);
     }
 }
 
