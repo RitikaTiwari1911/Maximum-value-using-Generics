@@ -8,32 +8,33 @@ import org.junit.Test;
 public class MaxValueGenericsTest {
     MaxValueGenerics maxValue;
 
-    @Before
-    public void object() {
-        maxValue = new MaxValueGenerics();
-    }
-
     //Using generics to find the greatest value among three given values
     //Finding the greatest integer value
     @Test
     public void givenThreeInteger_ReturnGreatestNumber(){
-        Integer maxInteger = maxValue.MaximumTest(12,46,91);
-        Assert.assertEquals(Integer.valueOf(91),maxInteger);
+        maxValue = new MaxValueGenerics(21,48,64);
+        Comparable maxInteger =  maxValue.testMaximum();
+        Assert.assertEquals(Integer.valueOf(64),maxInteger);
     }
+
 
     //Finding the greatest float value
     @Test
     public void givenThreeFloat_ReturnGreatestFloat(){
-        Float maxFloat = maxValue.MaximumTest(2.6f,94.3f,12.3f);
-        Assert.assertEquals(Float.valueOf(94.3f),maxFloat);
+        maxValue = new MaxValueGenerics(25.4f,45.9f,3.1f);
+        Comparable maxFloat = maxValue.testMaximum();
+        Assert.assertEquals(Float.valueOf((float) 45.9f),maxFloat);
     }
 
     //Finding the greatest String value
     @Test
     public void givenThreeString_ReturnGreatestString(){
-        String maxString = maxValue.MaximumTest("pear","strawberry","apple");
+        maxValue = new MaxValueGenerics("pear","strawberry","apple");
+        Comparable maxString = maxValue.testMaximum();
         Assert.assertEquals("strawberry",maxString);
     }
+
+
 }
 
 
